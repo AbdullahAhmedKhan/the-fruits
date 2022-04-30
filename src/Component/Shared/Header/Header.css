@@ -9,3 +9,15 @@
 .menu-bar a:hover {
     color: orangered;
 }
+
+.sign-btn {
+    background: #673AB7;
+    padding: 10px 15px;
+    border-radius: 25px;
+    color: aliceblue;
+}
+
+.sign-btn:hover {
+    background-color: #4700c2;
+    transition: 0.3s ease-in-out;
+}

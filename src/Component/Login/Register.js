@@ -3,10 +3,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import './Login.css';
 import logo from '../../images/logo.png';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from './SocialLogin';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { sendEmailVerification } from 'firebase/auth';
 const Register = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
     const handleLogin = () => {
         navigate('/login');
     }
@@ -14,6 +19,33 @@ const Register = () => {
     const handleEyeButton = () => {
         setEye(!eye);
     }
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
+    const handleSubmit = async e => {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        await createUserWithEmailAndPassword(email, password);
+        sendEmailVerification(auth.currentUser)
+            .then(async () => {
+                if (user.emailVerified === true) {
+                    navigate(from, { replace: true });
+                }
+            })
+        console.log(name, email, password);
+
+    }
+
     return (
         <div className="form-bg">
             <div className="container w-100 mx-auto">
@@ -26,20 +58,20 @@ const Register = () => {
                                     <span className="signup"><p>Already have an account? <span onClick={handleLogin} className='text-warning' style={{ cursor: "pointer" }}>Login</span></p></span>
                                 </div>
                             </div>
-                            <form className="form-horizontal">
+                            <form onSubmit={handleSubmit} className="form-horizontal">
                                 <h3 className="title">Please Register!</h3>
                                 <div className="form-group">
                                     <span className="input-icon"></span>
-                                    <input className="form-control" type="text" placeholder="Full Name" />
+                                    <input className="form-control" type="text" name='name' placeholder="Full Name" />
                                 </div>
                                 <div className="form-group">
                                     <span className="input-icon"><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon></span>
-                                    <input className="form-control" type="email" placeholder="Email Address" />
+                                    <input className="form-control" type="email" name='email' placeholder="Email Address" />
                                 </div>
 
                                 <div className="form-group position-relative">
                                     <span className="input-icon"><FontAwesomeIcon icon={faLock}></FontAwesomeIcon></span>
-                                    <input className=" form-control " type={eye ? "text" : "password"} placeholder="Password" />
+                                    <input className=" form-control " type={eye ? "text" : "password"} placeholder="Password" name='password' />
                                     <FontAwesomeIcon onClick={handleEyeButton} className='position-absolute' style={{ top: "10", right: "10", color: "grey", fontSize: "16px" }} icon={faEye}></FontAwesomeIcon>
                                 </div>
                                 <button className="btn signin">Signup</button>

@@ -18,7 +18,7 @@ const Header = () => {
                         </Nav>
                         <Nav>
                             <Nav className='menu-bar'>
-                                <Link to="/login">Login</Link>
+                                <Link to="/login"><span className='sign-btn'>Login</span></Link>
                             </Nav>
                         </Nav>
                     </Navbar.Collapse>
