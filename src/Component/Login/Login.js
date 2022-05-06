@@ -1,12 +1,28 @@
 import { faEnvelope, faEye, faLock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './Login.css';
 import logo from '../../images/logo.png';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from './SocialLogin';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
+import Loading from '../Loading/Loading';
 const Login = () => {
+    const emailRef = useRef('');
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
+        auth
+    );
     const handleSignUp = () => {
         navigate('/register');
     }
@@ -18,7 +34,24 @@ const Login = () => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email, password);
+        signInWithEmailAndPassword(email, password);
+        e.target.reset();
+    }
+    if (user) {
+        navigate(from, { replace: true });
+    }
+    if(loading || sending){
+        return <Loading></Loading>;
+    }
+    const resetPassword = async () => {
+        const unknownEmail = emailRef.current.value;
+        if (unknownEmail) {
+            await sendPasswordResetEmail(unknownEmail);
+            toast.success('Sent email successfully! Please check your inbox.');
+        }
+        else {
+            toast.error('Please enter your email address first !');
+        }
     }
     return (
         <div className="form-bg">
@@ -36,7 +69,7 @@ const Login = () => {
                                 <h3 className="title">Please Login!</h3>
                                 <div className="form-group">
                                     <span className="input-icon"><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon></span>
-                                    <input className="form-control" type="email" name="email" placeholder="Email Address" />
+                                    <input className="form-control" type="email" name="email" placeholder="Email Address" ref={emailRef} />
                                 </div>
                                 <div className="form-group position-relative">
                                     <span className="input-icon"><FontAwesomeIcon icon={faLock}></FontAwesomeIcon></span>
@@ -44,7 +77,13 @@ const Login = () => {
                                     <FontAwesomeIcon onClick={handleEyeButton} className='position-absolute' style={{ top: "10", right: "10", color: "grey", fontSize: "16px" }} icon={faEye}></FontAwesomeIcon>
                                 </div>
                                 <button className="btn signin">Login</button>
-                                <span className="forgot-pass"><p style={{ cursor: "pointer" }}>Forgot Password?</p></span>
+                                {
+                                    error?
+                                    <p className='text-danger fs-6'>{error.message}</p>
+                                    :
+                                    ""
+                                }
+                                <span onClick={resetPassword} className="forgot-pass"><p style={{ cursor: "pointer" }}>Forgot Password?</p></span>
                                 <SocialLogin></SocialLogin>
                             </form>
 

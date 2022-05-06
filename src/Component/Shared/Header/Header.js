@@ -27,7 +27,7 @@ const Header = () => {
                             <Nav className='menu-bar'>
                                 {
                                     user ?
-                                        <Link to="/login"><span className='sign-btn' onClick={handleSignOut}>Signout</span></Link>
+                                        <Link to="/login"><span className='sign-btn bg-danger' onClick={handleSignOut}>Signout</span></Link>
                                         :
                                         <Link to="/login"><span className='sign-btn'>Login</span></Link>
 

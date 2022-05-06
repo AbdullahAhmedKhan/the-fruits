@@ -8,6 +8,7 @@ import SocialLogin from './SocialLogin';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { sendEmailVerification } from 'firebase/auth';
+import Loading from '../Loading/Loading';
 const Register = () => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -29,6 +30,9 @@ const Register = () => {
     if (user) {
         navigate(from, { replace: true });
     }
+    if (loading || updating) {
+        return <Loading></Loading>;
+    }
 
     const handleSubmit = async e => {
         e.preventDefault();
@@ -38,9 +42,7 @@ const Register = () => {
         await createUserWithEmailAndPassword(email, password);
         sendEmailVerification(auth.currentUser)
             .then(async () => {
-                if (user.emailVerified === true) {
-                    navigate(from, { replace: true });
-                }
+                navigate(from, { replace: true });
             })
         console.log(name, email, password);
 
@@ -62,16 +64,16 @@ const Register = () => {
                                 <h3 className="title">Please Register!</h3>
                                 <div className="form-group">
                                     <span className="input-icon"></span>
-                                    <input className="form-control" type="text" name='name' placeholder="Full Name" />
+                                    <input className="form-control" type="text" name='name' placeholder="Full Name" required/>
                                 </div>
                                 <div className="form-group">
                                     <span className="input-icon"><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon></span>
-                                    <input className="form-control" type="email" name='email' placeholder="Email Address" />
+                                    <input className="form-control" type="email" name='email' placeholder="Email Address" required/>
                                 </div>
 
                                 <div className="form-group position-relative">
                                     <span className="input-icon"><FontAwesomeIcon icon={faLock}></FontAwesomeIcon></span>
-                                    <input className=" form-control " type={eye ? "text" : "password"} placeholder="Password" name='password' />
+                                    <input className=" form-control " type={eye ? "text" : "password"} placeholder="Password" name='password' required/>
                                     <FontAwesomeIcon onClick={handleEyeButton} className='position-absolute' style={{ top: "10", right: "10", color: "grey", fontSize: "16px" }} icon={faEye}></FontAwesomeIcon>
                                 </div>
                                 <button className="btn signin">Signup</button>

@@ -1,0 +1,46 @@
+.fruit-card {
+    border-radius: 20px;
+    background: #AA076B;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #61045F, #AA076B);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #61045F, #AA076B);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.price-div {
+    border-radius: 20px;
+    color: black;
+    background: #e0e0e0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.btn-div button {
+
+    font-weight: 900;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 4px solid #AA076B;
+}
+
+.btn-div button:hover {
+    background-color: #AA076B;
+    color: aliceblue;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05);
+}
+
+.text-violet {
+    color: #AA076B;
+}
+
+.fruit-name {
+    border-bottom:3px solid orange;
+    color: aliceblue;
+}
+.rounded-custom{
+    border-radius: 20px;
+}

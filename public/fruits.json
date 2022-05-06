@@ -1,0 +1,167 @@
+[
+    {
+        "id": "1",
+        "title": "An apple is an edible fruit produced by an apple tree",
+        "name": "Apple",
+        "supplier": "Aziz Group",
+        "price": 30,
+        "quantity": 20,
+        "ratings": 4,
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+        "img": "https://i.ibb.co/MpCg86Z/apple.jpg"
+    },
+    {
+        "id": "2",
+        "title": "An apple is an edible fruit produced by an apple tree",
+        "name": "Mango",
+        "supplier": "Bd Group",
+        "price": 20,
+        "quantity": 180,
+        "ratings": 5,
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+        "img": "https://i.ibb.co/k04J37T/mango.jpg"
+    },
+    {
+        "id": "3",
+        "title": "An apple is an edible fruit produced by an apple tree",
+        "name": "Banana",
+        "supplier": "Pran",
+        "price": 15,
+        "quantity": 350,
+        "ratings": 4,
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+        "img": "https://i.ibb.co/prfS8fC/banana.jpg"
+    },
+    {
+        "id": "4",
+        "title": "An apple is an edible fruit produced by an apple tree",
+        "name": "Coconut",
+        "supplier": "Pran",
+        "price": 25,
+        "quantity": 150,
+        "ratings": 4,
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+        "img": "https://i.ibb.co/mHWJhzg/coconut.jpg"
+    },
+    {
+        "id": "5",
+        "title": "An apple is an edible fruit produced by an apple tree",
+        "name": "Grapes",
+        "supplier": "Pran",
+        "price": 60,
+        "quantity": 410,
+        "ratings": 4,
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+        "img": "https://i.ibb.co/9tqXzTn/grapes.jpg"
+    },
+    {
+        "id": "6",
+        "title": "An apple is an edible fruit produced by an apple tree",
+        "name": "Guava",
+        "supplier": "Square BD",
+        "price": 12,
+        "quantity": 300,
+        "ratings": 4,
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+        "img": "https://i.ibb.co/jgrJt6J/guava.jpg"
+    },
+    {
+        "id": "7",
+        "title": "An apple is an edible fruit produced by an apple tree",
+        "name": "Jackfruit",
+        "supplier": "ACI",
+        "price": 18,
+        "quantity": 65,
+        "ratings": 4,
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+        "img": "https://i.ibb.co/Gk0SpWJ/jackfruit.jpg"
+    },
+    {
+        "id": "8",
+        "title": "An apple is an edible fruit produced by an apple tree",
+        "name": "PineApple",
+        "supplier": "TANG",
+        "price": 14,
+        "quantity": 55,
+        "ratings": 4,
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+        "img": "https://i.ibb.co/7JH2kyp/pineapple.jpg"
+    },
+    {
+        "id": "9",
+        "title": "An apple is an edible fruit produced by an apple tree",
+        "name": "Strawberry",
+        "supplier": "JUZZ",
+        "price": 45,
+        "quantity": 65,
+        "ratings": 4,
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+        "img": "https://i.ibb.co/PYKXDFd/strawberry.jpg"
+    },
+    {
+        "id": "10",
+        "title": "An apple is an edible fruit produced by an apple tree",
+        "name": "Orange",
+        "supplier": "SMC",
+        "price": 25,
+        "quantity": 95,
+        "ratings": 4,
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+        "img": "https://i.ibb.co/8zHmBL5/orange.jpg"
+    },
+    {
+        "id": "11",
+        "title": "An apple is an edible fruit produced by an apple tree",
+        "name": "Blackberry",
+        "supplier": "BD fruits",
+        "price": 65,
+        "quantity": 35,
+        "ratings": 4,
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+        "img": "https://i.ibb.co/0F40qJr/blackberry.jpg"
+    },
+    {
+        "id": "12",
+        "title": "An apple is an edible fruit produced by an apple tree",
+        "name": "Mango(Lengra)",
+        "supplier": "Fruto",
+        "price": 25,
+        "quantity": 55,
+        "ratings": 4,
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+        "img": "https://i.ibb.co/rp3Bdsn/mango.jpg"
+    },
+    {
+        "id": "13",
+        "title": "An apple is an edible fruit produced by an apple tree",
+        "name": "Blackberry(Bangla)",
+        "supplier": "ETC",
+        "price": 15,
+        "quantity": 95,
+        "ratings": 4,
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+        "img": "https://i.ibb.co/LJRTXCj/berry.jpg"
+    },
+    {
+        "id": "14",
+        "title": "An apple is an edible fruit produced by an apple tree",
+        "name": "Mango(Himsagor)",
+        "supplier": "Fruto",
+        "price": 18,
+        "quantity": 85,
+        "ratings": 4,
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+        "img": "https://i.ibb.co/XDYmmVh/mangobyte.jpg"
+    },
+    {
+        "id": "15",
+        "title": "An apple is an edible fruit produced by an apple tree",
+        "name": "Licchi",
+        "supplier": "SMC",
+        "price": 22,
+        "quantity": 88,
+        "ratings": 4,
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+        "img": "https://i.ibb.co/zx43fxX/licchi.jpg"
+    }
+]
