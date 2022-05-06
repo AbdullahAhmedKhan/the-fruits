@@ -19,7 +19,7 @@ const Inventory = () => {
     return (
         <div className='container my-5'>
 
-            <h2 className='text-center d-inline text-secondary mb-3'>Inventory Statement</h2> <button className='btn btn-outline-success d-flex justify-content-end'>Add New Item</button>
+            <h2 className='text-center text-secondary mb-3'>Inventory Statement</h2> <button className='btn btn-outline-success d-block mx-auto mb-3 shadow'>Add New Item</button>
             <table className=''>
 
                 <thead>
