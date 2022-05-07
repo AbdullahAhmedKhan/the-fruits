@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useFruits from '../../hooks/useFruits';
 import Fruit from '../Inventory/Fruit';
+import Review from '../Review/Review';
 import Service from '../Service/Service';
 import Banner from './Banner';
 
@@ -28,6 +29,7 @@ const Home = () => {
                 </div>
             </div>
             <Service></Service>
+            <Review></Review>
 
         </div>
 

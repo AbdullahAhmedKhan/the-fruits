@@ -18,7 +18,7 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <div className="banner-text">
+                        <div className="banner-text text-dark">
                             <img src={logo} alt="" className='img-fluid w-75' />
                             <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -32,7 +32,7 @@ const Banner = () => {
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <div className="banner-text">
+                        <div className="banner-text text-dark">
                             <img src={logo} alt="" className='img-fluid w-75' />
                             <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -46,7 +46,7 @@ const Banner = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <div className="banner-text">
+                        <div className="banner-text text-dark">
                             <img src={logo} alt="" className='img-fluid w-75' />
                             <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -60,7 +60,7 @@ const Banner = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <div className="banner-text">
+                        <div className="banner-text text-dark">
                             <img src={logo} alt="" className='img-fluid w-75' />
                             <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -74,7 +74,7 @@ const Banner = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <div className="banner-text">
+                        <div className="banner-text text-dark">
                             <img src={logo} alt="" className='img-fluid w-75' />
                             <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>

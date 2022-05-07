@@ -1,49 +1,61 @@
+import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import './Service.css';
 const Service = () => {
     return (
-        <div className='service-div'>
-            <div class="container h-100">
-                <div class="row align-middle">
-                    <div class="col-md-6 col-lg-4 column">
-                        <div class="card gr-1">
-                            <div class="txt">
-                                <h1>BRANDING AND 
-                                CORPORATE DESIGN</h1>
-                            <p>Visual communication and problem-solving</p>
+        <div className='mb-5'>
+            <div className="wrapper">
+                <input type="radio" name="slider" id="tab-1" />
+                <input type="radio" name="slider" id="tab-2" checked />
+                <input type="radio" name="slider" id="tab-3" />
+                <header>
+                    <label for="tab-1" className="tab-1">Basic</label>
+                    <label for="tab-2" className="tab-2">Standard</label>
+                    <label for="tab-3" className="tab-3">Premium</label>
+                    <div className="slider"></div>
+                </header>
+                <div className="card-area">
+                    <div className="cards">
+                        <div className="row row-1">
+                            <div className="price-details">
+                                <span className="price">19</span>
+                                <p>For beginner use</p>
+                            </div>
+                            <ul className="features ms-3">
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>100 GB Premium Bandwidth</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>FREE 50+ Installation Scripts WordPress Supported</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>One FREE Domain Registration .com and .np extensions only</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Unlimited Email Accounts & Databases</span></li>
+                            </ul>
                         </div>
-                        <a href="#">more</a>
-                        <div class="ico-card">
-                            <i class="fa fa-rebel"></i>
+                        <div className="row">
+                            <div className="price-details">
+                                <span className="price">99</span>
+                                <p>For professional use</p>
+                            </div>
+                            <ul className="features ms-3">
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Unlimited GB Premium Bandwidth</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>FREE 200+ Installation Scripts WordPress Supported</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Five FREE Domain Registration .com and .np extensions only</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Unlimited Email Accounts & Databases</span></li>
+                            </ul>
+                        </div>
+                        <div className="row">
+                            <div className="price-details">
+                                <span className="price">49</span>
+                                <p>For team collaboration</p>
+                            </div>
+                            <ul className="features ms-5">
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>200 GB Premium Bandwidth</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>FREE 100+ Installation Scripts WordPress Supported</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Two FREE Domain Registration .com and .np extensions only</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Unlimited Email Accounts & Databases</span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 column">
-                    <div class="card gr-2">
-                        <div class="txt">
-                            <h1>Web Front-End 
-                            SOLUTIONS</h1>
-                        <p>How design is implemented on the web.</p>
-                    </div>
-                    <a href="#">more</a>
-                    <div class="ico-card">
-                        <i class="fa fa-codepen"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 column">
-                <div class="card gr-3">
-                    <div class="txt">
-                        <h1>UX/UI WEBsite AND MOBILE app</h1>
-                    <p>User Interface and User Experience Design.</p>
-                </div>
-                <a href="#">more</a>
-                <div class="ico-card">
-                    <i class="fa fa-empire"></i>
-                </div>
-            </div>
-            </div>
-            </div>
+                <button>Choose plan</button>
             </div>
         </div>
     );
