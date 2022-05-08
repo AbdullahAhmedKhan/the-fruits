@@ -9,6 +9,9 @@ import Banner from './Banner';
 const Home = () => {
     const [inventories, setInventories] = useState([]);
     const navigate = useNavigate();
+    const handleManage = () => {
+        navigate('/inventory');
+    }
 
     useEffect(() => {
         fetch('https://afternoon-tundra-03070.herokuapp.com/inventory')
@@ -28,6 +31,9 @@ const Home = () => {
                         }
                     </div>
                 </div>
+            </div>
+            <div className='mb-5'>
+                <button onClick={handleManage} className='btn d-block mx-auto btn-outline-success p-3 shadow-lg rounded'>Manage Inventories</button>
             </div>
             <Service></Service>
             <Review></Review>
