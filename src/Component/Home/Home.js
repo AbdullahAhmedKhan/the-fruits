@@ -11,11 +11,11 @@ const Home = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:5000/inventory')
+        fetch('https://afternoon-tundra-03070.herokuapp.com/inventory')
             .then(res => res.json())
             .then(data => setInventories(data))
     }, [])
-    
+
     return (
 
         <div className=''>

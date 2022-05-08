@@ -9,6 +9,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
 import Loading from '../Loading/Loading';
+import axios from 'axios';
 const Login = () => {
     const emailRef = useRef('');
     const navigate = useNavigate();
@@ -30,17 +31,22 @@ const Login = () => {
     const handleEyeButton = () => {
         setEye(!eye);
     }
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         signInWithEmailAndPassword(email, password);
         e.target.reset();
+
+        const { data } = await axios.post('https://afternoon-tundra-03070.herokuapp.com/login', { email });
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true });
+
     }
     if (user) {
         navigate(from, { replace: true });
     }
-    if(loading || sending){
+    if (loading || sending) {
         return <Loading></Loading>;
     }
     const resetPassword = async () => {
@@ -69,19 +75,19 @@ const Login = () => {
                                 <h3 className="title">Please Login!</h3>
                                 <div className="form-group">
                                     <span className="input-icon"><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon></span>
-                                    <input className="form-control" type="email" name="email" placeholder="Email Address" ref={emailRef} required/>
+                                    <input className="form-control" type="email" name="email" placeholder="Email Address" ref={emailRef} required />
                                 </div>
                                 <div className="form-group position-relative">
                                     <span className="input-icon"><FontAwesomeIcon icon={faLock}></FontAwesomeIcon></span>
-                                    <input className=" form-control " type={eye ? "text" : "password"} name="password" placeholder="Password" required/>
+                                    <input className=" form-control " type={eye ? "text" : "password"} name="password" placeholder="Password" required />
                                     <FontAwesomeIcon onClick={handleEyeButton} className='position-absolute' style={{ top: "10", right: "10", color: "grey", fontSize: "16px" }} icon={faEye}></FontAwesomeIcon>
                                 </div>
                                 <button className="btn signin">Login</button>
                                 {
-                                    error?
-                                    <p className='text-danger fs-6'>{error.message}</p>
-                                    :
-                                    ""
+                                    error ?
+                                        <p className='text-danger fs-6'>{error.message}</p>
+                                        :
+                                        ""
                                 }
                                 <span onClick={resetPassword} className="forgot-pass"><p style={{ cursor: "pointer" }}>Forgot Password?</p></span>
                                 <SocialLogin></SocialLogin>

@@ -18,7 +18,7 @@ const ProductDetails = () => {
     const handleAdd = e => {
         e.preventDefault();
         const value = e.target.restock.value;
-        fetch(`http://localhost:5000/inventory/increase/${productId}`, {
+        fetch(`https://afternoon-tundra-03070.herokuapp.com/inventory/increase/${productId}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'Application/json'
@@ -36,7 +36,7 @@ const ProductDetails = () => {
     }
 
     const handleDelivered = () => {
-        fetch(`http://localhost:5000/inventory/decrease/${productId}`, {
+        fetch(`https://afternoon-tundra-03070.herokuapp.com/inventory/decrease/${productId}`, {
             method: 'PUT',
         })
             .then(res => res.json())

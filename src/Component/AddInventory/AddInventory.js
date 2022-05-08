@@ -8,7 +8,7 @@ const AddInventory = () => {
     const [user] = useAuthState(auth);
     const onSubmit = data => {
         console.log(data)
-        const url = `http://localhost:5000/inventory`;
+        const url = `https://afternoon-tundra-03070.herokuapp.com/inventory`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -26,7 +26,7 @@ const AddInventory = () => {
         <div className='container my-5 w-75 mx-auto border p-4 rounded'>
             <h2 className='text-center text-success mb-3'>Please add an inventory!</h2>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
-                
+
                 <input className='mb-2 border p-2 rounded' placeholder="Email" defaultValue={user.email} type="email" {...register("email", { required: true })} />
                 <input className='mb-2 border p-2 rounded' placeholder='Product name' {...register("name", { required: true })} />
                 <input className='mb-2 border p-2 rounded' placeholder='Title' {...register("title", { required: true })} />
@@ -36,9 +36,9 @@ const AddInventory = () => {
                 <input className='mb-2 border p-2 rounded' placeholder='Description' {...register("description", { required: true })} />
                 <input className='mb-2 border p-2 rounded' placeholder='Photo URL' {...register("img", { required: true })} />
                 <input className='mb-2 border p-2 rounded' placeholder="Ratings out of 5" defaultValue='5' type="number" {...register("ratings", { required: true })} />
-               
 
-                <input className='py-3 btn shadow border border-3 border-dark btn-warning fs-5' type="submit" value="Add Inventory"/>
+
+                <input className='py-3 btn shadow border border-3 border-dark btn-warning fs-5' type="submit" value="Add Inventory" />
             </form>
         </div>
     );

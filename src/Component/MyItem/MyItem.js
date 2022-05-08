@@ -17,7 +17,7 @@ const MyItem = () => {
         const proceed = window.confirm('Are you sure want to delete?')
         if (proceed) {
             console.log('delete item', id)
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://afternoon-tundra-03070.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -36,8 +36,12 @@ const MyItem = () => {
 
         const getNewInventory = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/myInventory?email=${email}`;
-            const { data } = await axios.get(url);
+            const url = `https://afternoon-tundra-03070.herokuapp.com/myInventory?email=${email}`;
+            const { data } = await axios.get(url, {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            });
             setItems(data)
         }
         getNewInventory()
