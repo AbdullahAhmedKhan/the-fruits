@@ -12,6 +12,8 @@ import Inventory from './Component/Inventory/Inventory';
 import Home from './Component/Home/Home';
 import ProductDetails from './Component/ProductDetails/ProductDetails';
 import AddInventory from './Component/AddInventory/AddInventory';
+import MyItem from './Component/MyItem/MyItem';
+import RequireAuth from './Component/RequireAuth/RequireAuth';
 
 
 function App() {
@@ -25,8 +27,25 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/inventory' element={<Inventory></Inventory>}></Route>
-        <Route path='/inventory/:productId' element={<ProductDetails></ProductDetails>}></Route>
-        <Route path='/AddInventory' element={<AddInventory></AddInventory>}></Route>
+
+        <Route path='/inventory/:productId' element={
+          <RequireAuth>
+            <ProductDetails></ProductDetails>
+          </RequireAuth>
+        }></Route>
+
+
+        <Route path='/AddInventory' element={
+          <RequireAuth><AddInventory></AddInventory></RequireAuth>
+        }></Route>
+
+
+        <Route path='/myitem' element={
+          <RequireAuth>
+            <MyItem></MyItem>
+          </RequireAuth>
+        }></Route>
+
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer></ToastContainer>

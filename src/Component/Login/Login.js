@@ -69,11 +69,11 @@ const Login = () => {
                                 <h3 className="title">Please Login!</h3>
                                 <div className="form-group">
                                     <span className="input-icon"><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon></span>
-                                    <input className="form-control" type="email" name="email" placeholder="Email Address" ref={emailRef} />
+                                    <input className="form-control" type="email" name="email" placeholder="Email Address" ref={emailRef} required/>
                                 </div>
                                 <div className="form-group position-relative">
                                     <span className="input-icon"><FontAwesomeIcon icon={faLock}></FontAwesomeIcon></span>
-                                    <input className=" form-control " type={eye ? "text" : "password"} name="password" placeholder="Password" />
+                                    <input className=" form-control " type={eye ? "text" : "password"} name="password" placeholder="Password" required/>
                                     <FontAwesomeIcon onClick={handleEyeButton} className='position-absolute' style={{ top: "10", right: "10", color: "grey", fontSize: "16px" }} icon={faEye}></FontAwesomeIcon>
                                 </div>
                                 <button className="btn signin">Login</button>

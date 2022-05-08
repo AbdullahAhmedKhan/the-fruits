@@ -16,10 +16,29 @@ const Inventory = () => {
     const handleUpdate = productId => {
         navigate(`/inventory/${productId}`);
     }
+    const handleNewItem = () => {
+        navigate('/AddInventory');
+    }
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure want to delete?')
+        if (proceed) {
+            const url = `http://localhost:5000//inventory/${id}`;
+            fetch(url, {
+                method: 'DELETE',
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deleteCount > 0) {
+                        const remaining = inventories.filter(fruit => fruit._id !== id)
+                        setInventories(remaining);
+                    }
+                })
+        }
+    }
     return (
         <div className='container my-5'>
 
-            <h2 className='text-center text-secondary mb-3'>Inventory Statement</h2> <button className='btn btn-outline-success d-block mx-auto mb-3 shadow'>Add New Item</button>
+            <h2 className='text-center text-secondary mb-3'>Inventory Statement</h2> <button onClick={handleNewItem} className='btn btn-outline-success d-block mx-auto mb-3 shadow'>Add New Item</button>
             <table className=''>
 
                 <thead>
@@ -44,7 +63,7 @@ const Inventory = () => {
                                 <td data-label="Quantity">{fruit.quantity}</td>
                                 <td>
                                     <button onClick={() => handleUpdate(fruit._id)} className=' text-dark btn fs-6 p-1 border-3 border-success me-3 rounded-pill'><FontAwesomeIcon className='mx-2 fs-6 text-success' style={{ cursor: "pointer" }} icon={faPenToSquare}></FontAwesomeIcon><span className='pe-2'>Update</span></button>
-                                    <button className=' text-dark btn fs-6 p-1 border-3 border-danger rounded-pill'><FontAwesomeIcon className='mx-2 fs-6 text-danger' style={{ cursor: "pointer" }} icon={faTrash}></FontAwesomeIcon><span className='pe-2'>Delete</span></button>
+                                    <button onClick={() => handleDelete(fruit._id)} className=' text-dark btn fs-6 p-1 border-3 border-danger rounded-pill'><FontAwesomeIcon className='mx-2 fs-6 text-danger' style={{ cursor: "pointer" }} icon={faTrash}></FontAwesomeIcon><span className='pe-2'>Delete</span></button>
                                 </td>
                             </tr>
                         )

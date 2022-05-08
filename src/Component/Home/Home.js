@@ -15,6 +15,7 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setInventories(data))
     }, [])
+    
     return (
 
         <div className=''>

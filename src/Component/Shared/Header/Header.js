@@ -8,7 +8,7 @@ import logo from '../../../images/logo.png';
 import './Header.css';
 const Header = () => {
     const [user] = useAuthState(auth);
-    const handleSignOut = () =>{
+    const handleSignOut = () => {
         signOut(auth);
     }
     return (
@@ -20,7 +20,12 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto menu-bar">
                             <Link to='/'>Home</Link>
-                            <Link to='/inventory'>Inventory</Link>
+                            <Link to='/inventory'>Manage Inventory</Link>
+                            
+                                
+                                <Link to='/myitem'>My Items</Link>
+                            
+                                <Link to='/myitem'>My Items</Link>
                             <Link to='/blogs'>Blogs</Link>
                         </Nav>
                         <Nav>

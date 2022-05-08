@@ -1,9 +1,14 @@
 import { faBox, faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Fruit.css';
 const Fruit = ({ fruit }) => {
-    const { id, name, title, description, img, quantity, supplier, ratings, price } = fruit;
+    const navigate = useNavigate();
+    const { _id, name, title, description, img, quantity, supplier, ratings, price } = fruit;
+    const handleUpdate = productId => {
+        navigate(`/inventory/${productId}`);
+    }
     return (
         <div>
 
@@ -35,7 +40,7 @@ const Fruit = ({ fruit }) => {
                             <FontAwesomeIcon className='text-violet' icon={faStar}></FontAwesomeIcon>
                         </div>
                     </div>
-                    <div className="d-flex flex-column mt-1 btn-div"><button className="btn btn-custom btn-sm mt-2" type="button">View Details</button></div>
+                    <div className="d-flex flex-column mt-1 btn-div"><button onClick={() => handleUpdate(_id)} className="btn btn-custom btn-sm mt-2" type="button">Update</button></div>
                 </div>
             </div>
 
