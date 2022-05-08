@@ -38,7 +38,7 @@ const AddInventory = () => {
                 <input className='mb-2 border p-2 rounded' placeholder="Ratings out of 5" defaultValue='5' type="number" {...register("ratings", { required: true })} />
 
 
-                <input className='py-3 btn shadow border border-3 border-dark btn-warning fs-5' type="submit" value="Add Inventory" />
+                <input className='py-3 btn shadow btn-dark fs-5' type="submit" value="Add Inventory" />
             </form>
         </div>
     );

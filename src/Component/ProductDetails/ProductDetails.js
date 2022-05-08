@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import useProductDetails from '../../hooks/useProductDetails';
 
@@ -9,8 +9,10 @@ const ProductDetails = () => {
     const [product, setProduct] = useProductDetails(productId);
 
     const [show, setShow] = useState(false);
-
-
+    const navigate = useNavigate();
+    const handleManage = () => {
+        navigate('/inventory');
+    }
 
     const handleClose = () => setShow(false);
     const handleShow = e => setShow(true);
@@ -103,7 +105,7 @@ const ProductDetails = () => {
                     </div>
                 </div>
                 <div className='mb-5'>
-                    <button className='btn d-block mx-auto btn-outline-success p-3 shadow-lg rounded'>Manage Inventories</button>
+                    <button onClick={handleManage} className='btn d-block mx-auto btn-outline-success p-3 shadow-lg rounded'>Manage Inventories</button>
                 </div>
             </section>
             {/* Modal  */}

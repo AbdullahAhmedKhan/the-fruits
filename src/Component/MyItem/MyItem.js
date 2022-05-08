@@ -48,7 +48,7 @@ const MyItem = () => {
 
     }, [user]);
     return (
-        <div className='container my-5'>
+        <div style={{minHeight:"70vh"}} className='container my-5'>
 
             <h2 className='text-center text-secondary mb-3'>My Inventory Statement</h2>
             <table className=''>

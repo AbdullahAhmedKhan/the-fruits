@@ -132,17 +132,17 @@ header .slider {
 }
 
 .price-details .price::before {
-    content: "$";
-    left: -13px;
-    top: 17px;
+    content: "Kg";
+    left: -30px;
+    top: 15px;
     font-size: 20px;
 }
 
 .price-details .price::after {
-    content: "/mon";
-    right: -33px;
-    bottom: 17px;
-    font-size: 13px;
+    content: "+";
+    right: -28px;
+    bottom: 0px;
+    font-size: 45px;
 }
 
 .price-details p {

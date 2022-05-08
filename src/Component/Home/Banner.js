@@ -20,8 +20,8 @@ const Banner = () => {
                     <Carousel.Caption>
                         <div className="banner-text text-dark">
                             <img src={logo} alt="" className='img-fluid w-75' />
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3>Preservative free storage</h3>
+                            <p>Freshness is our main authenticity.</p>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -34,8 +34,8 @@ const Banner = () => {
                     <Carousel.Caption>
                         <div className="banner-text text-dark">
                             <img src={logo} alt="" className='img-fluid w-75' />
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3 className='text-light'>Free packaging and boxing</h3>
+                            <p className='text-light'>Freshness is our main authenticity.</p>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -48,8 +48,8 @@ const Banner = () => {
                     <Carousel.Caption>
                         <div className="banner-text text-dark">
                             <img src={logo} alt="" className='img-fluid w-75' />
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3 className='text-light'>Maximum storage capacity</h3>
+                            <p className='text-light'>Freshness is our main authenticity.</p>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -62,8 +62,8 @@ const Banner = () => {
                     <Carousel.Caption>
                         <div className="banner-text text-dark">
                             <img src={logo} alt="" className='img-fluid w-75' />
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3>Discount for premium usage</h3>
+                            <p>Freshness is our main authenticity.</p>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -76,8 +76,8 @@ const Banner = () => {
                     <Carousel.Caption>
                         <div className="banner-text text-dark">
                             <img src={logo} alt="" className='img-fluid w-75' />
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3>Good quality refrigeration</h3>
+                            <p>Freshness is our main authenticity.</p>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>

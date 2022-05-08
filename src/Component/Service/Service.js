@@ -5,6 +5,7 @@ import './Service.css';
 const Service = () => {
     return (
         <div className='mb-5'>
+            <h1 className='text-center border-bottom w-75 mx-auto pb-3 border-3'>Our <span style={{color:"orangered"}}>Packages</span></h1>
             <div className="wrapper">
                 <input type="radio" name="slider" id="tab-1" />
                 <input type="radio" name="slider" id="tab-2" checked />
@@ -19,38 +20,38 @@ const Service = () => {
                     <div className="cards">
                         <div className="row row-1">
                             <div className="price-details">
-                                <span className="price">19</span>
-                                <p>For beginner use</p>
+                                <span className="price">20</span>
+                                <p>For Regular</p>
                             </div>
                             <ul className="features ms-3">
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>100 GB Premium Bandwidth</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>FREE 50+ Installation Scripts WordPress Supported</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>One FREE Domain Registration .com and .np extensions only</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Unlimited Email Accounts & Databases</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Efficient warehouse organization</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Maximum storage capacity</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>High productivity</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Push-back pallet racks</span></li>
                             </ul>
                         </div>
                         <div className="row">
                             <div className="price-details">
-                                <span className="price">99</span>
-                                <p>For professional use</p>
+                                <span className="price">80</span>
+                                <p>For Standard </p>
                             </div>
                             <ul className="features ms-3">
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Unlimited GB Premium Bandwidth</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>FREE 200+ Installation Scripts WordPress Supported</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Five FREE Domain Registration .com and .np extensions only</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Unlimited Email Accounts & Databases</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Live pallet racking</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Efficient warehouse organization</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Maximum storage capacity</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Free packaging and boxing</span></li>
                             </ul>
                         </div>
                         <div className="row">
                             <div className="price-details">
-                                <span className="price">49</span>
-                                <p>For team collaboration</p>
+                                <span className="price">200</span>
+                                <p>For Premium</p>
                             </div>
                             <ul className="features ms-5">
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>200 GB Premium Bandwidth</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>FREE 100+ Installation Scripts WordPress Supported</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Two FREE Domain Registration .com and .np extensions only</span></li>
-                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Unlimited Email Accounts & Databases</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Conventional pallet racking</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Preservative free storage system</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Free packaging and boxing</span></li>
+                                <li><FontAwesomeIcon className='fs-5 text-success' icon={faCircleCheck}></FontAwesomeIcon><span>Refund policy and 5% discount</span></li>
                             </ul>
                         </div>
                     </div>
