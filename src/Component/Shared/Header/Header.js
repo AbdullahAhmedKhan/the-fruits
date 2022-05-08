@@ -21,14 +21,20 @@ const Header = () => {
                         <Nav className="me-auto menu-bar">
                             <Link to='/'>Home</Link>
                             <Link to='/inventory'>Manage Inventory</Link>
-                            
-                                
-                                {
-                                    user ? 
-                                    <Link to='/myitem'>My Items</Link>
+
+
+                            {
+                                user ?
+                                    <Link to='/myitem'>My Item</Link>
                                     :
                                     ''
-                                }
+                            }
+                            {
+                                user ?
+                                    <Link to='/AddInventory'>Add Item</Link>
+                                    :
+                                    ''
+                            }
                             <Link to='/blogs'>Blogs</Link>
                         </Nav>
                         <Nav>
