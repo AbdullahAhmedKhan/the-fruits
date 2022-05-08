@@ -2,89 +2,36 @@ import React from 'react';
 import './Blog.css';
 const Blogs = () => {
     return (
-        
-            <div class="container w-75 mx-auto bootstrap snippets bootdeys">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 content-card">
-                        <div class="card-big-shadow">
-                            <div class="card card-just-text" data-background="color" data-color="blue" data-radius="none">
-                                <div class="content">
-                                    <h6 class="category">Best cards</h6>
-                                    <h4 class="title"><a href="#">Blue Card</a></h4>
-                                    <p class="description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
-                                </div>
-                            </div> 
-                            {/* //end card */}
-                        </div>
-                    </div>
+        <div>
+            <h1 className='text-center border-top p-3 mt-5 rounded d-inline-block bg-light shadow border-danger border-4'>Some interesting blogs</h1>
+            <div className='blog-container'>
 
-                    <div class="col-md-4 col-sm-6 content-card">
-                        <div class="card-big-shadow">
-                            <div class="card card-just-text" data-background="color" data-color="green" data-radius="none">
-                                <div class="content">
-                                    <h6 class="category">Best cards</h6>
-                                    <h4 class="title"><a href="#">Green Card</a></h4>
-                                    <p class="description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
-                                </div>
-                            </div> 
-                            {/* end card */}
-                        </div>
-                    </div>
 
-                    <div class="col-md-4 col-sm-6 content-card">
-                        <div class="card-big-shadow">
-                            <div class="card card-just-text" data-background="color" data-color="yellow" data-radius="none">
-                                <div class="content">
-                                    <h6 class="category">Best cards</h6>
-                                    <h4 class="title"><a href="#">Yellow Card</a></h4>
-                                    <p class="description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
-                                </div>
-                            </div> 
-                            {/* <!-- end card --> */}
-                        </div>
+                <div className='blog-question-container'>
+                    <div className="blog-question">
+                        <h4 className='text-success'>What are the difference between javascript and nodejs</h4>
+                        <hr />
+                        <p>JavaScript is a simple programming language that could be run in any browser that supports the JavaScript Engine. On the other hand, Node.js is a running environment or interpreter for the JavaScript programming language.</p>
+                        <p>JavaScript can run on any engine, including Firefox's Spider Monkey, Safari's JavaScript Core, and V8 (Google Chrome). As a result, JavaScript programming is very simple to create, and any running environment is equivalent to a proper browser. On the other hand, Node.js only supports the V8 engine, which is exclusive to Google Chrome.</p>
                     </div>
-
-                    <div class="col-md-4 col-sm-6 content-card">
-                        <div class="card-big-shadow">
-                            <div class="card card-just-text" data-background="color" data-color="brown" data-radius="none">
-                                <div class="content">
-                                    <h6 class="category">Best cards</h6>
-                                    <h4 class="title"><a href="#">Brown Card</a></h4>
-                                    <p class="description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
-                                </div>
-                            </div> 
-                            {/* <!-- end card --> */}
-                        </div>
+                    <div className="blog-question">
+                        <h4 className='text-success'>What are the differences between sql and nosql databases?</h4>
+                        <hr />
+                        <p>In SQL table with fixed rows and columns, on the other hand document type JSON documents, key-value, table with rows and dynamic columns in nosql.
+                        </p>
+                        <p>SQL supported Multi-Record ACID Transactions but most nosql do not support multi-record ACID transactions. However, some—like MongoDB—do.</p>
                     </div>
-
-                    <div class="col-md-4 col-sm-6 content-card">
-                        <div class="card-big-shadow">
-                            <div class="card card-just-text" data-background="color" data-color="purple" data-radius="none">
-                                <div class="content">
-                                    <h6 class="category">Best cards</h6>
-                                    <h4 class="title"><a href="#">Purple Card</a></h4>
-                                    <p class="description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
-                                </div>
-                            </div> 
-                            {/* <!-- end card --> */}
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 content-card">
-                        <div class="card-big-shadow">
-                            <div class="card card-just-text" data-background="color" data-color="orange" data-radius="none">
-                                <div class="content">
-                                    <h6 class="category">Best cards</h6>
-                                    <h4 class="title"><a href="#">Orange Card</a></h4>
-                                    <p class="description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
-                                </div>
-                            </div>
-                             {/* <!-- end card --> */}
-                        </div>
+                    <div className="blog-question">
+                        <h4 className='text-success'>What is the purpose of jwt and how does it work?</h4>
+                        <hr />
+                        <p>
+                            A JWT is a mechanism to verify the owner of some JSON data. It's an encoded, URL-safe string that can contain an unlimited amount of data and is cryptographically signed.  </p>
+                        <p>JWTs differ from other web tokens in that they contain a set of claims. Claims are used to transmit information between two parties. What these claims are depends on the use case at hand. For example, a claim may assert who issued the token, how long it is valid for, or what permissions the client has been granted.</p>
                     </div>
                 </div>
+
             </div>
-    
+        </div>
     );
 };
 
