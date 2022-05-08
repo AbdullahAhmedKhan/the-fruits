@@ -8,7 +8,7 @@ const Review = () => {
             
             <h5 className='text-center text-uppercase text-light'>
             <FontAwesomeIcon className='mx-1' icon={faAnglesRight}></FontAwesomeIcon>
-                What out <span className='border-bottom border-4 border-warning'>customers</span> are saying</h5>
+                What our <span className='border-bottom border-4 border-warning'>customers</span> are saying</h5>
             <div className="card-group text-center">
                 <div className="card m-3 border-0 shadow rounded">
                     <img style={{ width: "150px" }} className="card-img-top mx-auto rounded-circle mt-3 shadow" src="https://i.ibb.co/VvjBdyW/rizone.jpg" alt="Card image cap" />
