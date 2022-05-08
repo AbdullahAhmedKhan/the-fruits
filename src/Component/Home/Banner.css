@@ -13,14 +13,14 @@
 
 @media screen and (max-width:560px) {
     .banner-text{
-        padding: 8px;
+        padding: 7px;
     }
     .banner-text h3{
         margin-top: 5px;
-        font-size: 15px;
+        font-size: 13px;
     }
     .banner-text p{
-        font-size: 12px;
+        font-size: 10px;
     }
     
 }

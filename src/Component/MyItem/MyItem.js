@@ -74,8 +74,8 @@ const MyItem = () => {
                                 <td data-label="Supplier">{fruit.supplier}</td>
                                 <td data-label="Quantity">{fruit.quantity}</td>
                                 <td>
-                                    <button onClick={() => handleUpdate(fruit._id)} className=' text-dark btn fs-6 p-1 border-3 border-success me-3 rounded-pill'><FontAwesomeIcon className='mx-2 fs-6 text-success' style={{ cursor: "pointer" }} icon={faPenToSquare}></FontAwesomeIcon><span className='pe-2'>Update</span></button>
-                                    <button onClick={() => handleDelete(fruit._id)} className=' text-dark btn fs-6 p-1 border-3 border-danger rounded-pill'><FontAwesomeIcon className='mx-2 fs-6 text-danger' style={{ cursor: "pointer" }} icon={faTrash}></FontAwesomeIcon><span className='pe-2'>Delete</span></button>
+                                    <button onClick={() => handleUpdate(fruit._id)} className=' text-dark btn fs-6 p-1 border-3 border-success me-1 rounded-pill'><FontAwesomeIcon className='mx-1 fs-6 text-success' style={{ cursor: "pointer" }} icon={faPenToSquare}></FontAwesomeIcon><span className='pe-1'>Update</span></button>
+                                    <button onClick={() => handleDelete(fruit._id)} className=' text-dark btn fs-6 p-1 border-3 border-danger rounded-pill'><FontAwesomeIcon className='mx-1 fs-6 text-danger' style={{ cursor: "pointer" }} icon={faTrash}></FontAwesomeIcon><span className='pe-1'>Delete</span></button>
                                 </td>
                             </tr>
                         )
