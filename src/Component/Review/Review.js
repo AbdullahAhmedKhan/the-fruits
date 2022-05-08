@@ -16,7 +16,7 @@ const Review = () => {
                     <div className="card-body">
                         <h3 className="card-title rounded-pill border d-inline px-3 py-1 m-3 border-3 border-secondary shadow">Rizone Rakib</h3> <br /> <br />
                         <FontAwesomeIcon className='fs-2 text-secondary me-3' icon={faQuoteLeft}></FontAwesomeIcon>
-                        <span className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</span>
+                        <span className="card-text">Freshness is one of their characteristics. The quality of all the items enclosed is fantastic, so fresh and hardly any plastic in sight! Well done.</span>
                         <FontAwesomeIcon className='fs-2 text-secondary ms-3' icon={faQuoteRight}></FontAwesomeIcon>
                     </div>
                     <div className="card-footer">
@@ -36,7 +36,7 @@ const Review = () => {
                         <h3 className="card-title rounded-pill border d-inline px-3 py-1 m-3 border-3 border-secondary shadow">Sadman Shakib</h3>
                         <br /> <br />
                         <FontAwesomeIcon className='fs-2 text-secondary me-3' icon={faQuoteLeft}></FontAwesomeIcon>
-                        <span className="card-text">This card has supporting text below as a natural lead-in to additional content.</span>
+                        <span className="card-text">Their service is much better. Lovely fruit box. 5 star from me.</span>
                         <FontAwesomeIcon className='fs-2 text-secondary ms-3' icon={faQuoteRight}></FontAwesomeIcon>
                     </div>
                     <div className="card-footer">
@@ -56,7 +56,7 @@ const Review = () => {
                         <h3 className="card-title rounded-pill border d-inline px-3 py-1 m-3 border-3 border-secondary shadow">M. R. Sourov</h3>
                         <br /><br />
                         <FontAwesomeIcon className='fs-2 text-secondary me-3' icon={faQuoteLeft}></FontAwesomeIcon>
-                        <span className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</span>
+                        <span className="card-text">We have had 2 fruit and veg deliveries now and have been really pleased with the variety and quality. Friendly delivery drivers and good communication over Facebook.</span>
                         <FontAwesomeIcon className='fs-2 text-secondary ms-3' icon={faQuoteRight}></FontAwesomeIcon>
                     </div>
                     <div className="card-footer">
