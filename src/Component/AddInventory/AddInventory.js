@@ -26,18 +26,19 @@ const AddInventory = () => {
         <div className='container my-5 w-75 mx-auto border p-4 rounded'>
             <h2 className='text-center text-success mb-3'>Please add an inventory!</h2>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
-                <input className='mb-2 border p-2 rounded' type="email" value={user.email} {...register("email")} disabled />
-                <input className='mb-2 border p-2 rounded' defaultValue="" placeholder='Product name' {...register("name")} />
-                <input className='mb-2 border p-2 rounded' placeholder='title' {...register("title")} />
-                <input className='mb-2 border p-2 rounded' placeholder="Supplier" {...register("supplier")} />
-                <input className='mb-2 border p-2 rounded' type="number" placeholder="Price" {...register("price")} />
-                <input className='mb-2 border p-2 rounded' type="number" placeholder="Quantity" {...register("quantity")} />
-                <input className='mb-2 border p-2 rounded' placeholder="Description" {...register("description")} />
-                <input className='mb-2 border p-2 rounded' placeholder="Image Link" {...register("image")} />
-                <input className='mb-2 border p-2 rounded' type='number' defaultValue='5' {...register("ratings")} hidden />
+                
+                <input className='mb-2 border p-2 rounded' placeholder="Email" defaultValue={user.email} type="email" {...register("email", { required: true })} />
+                <input className='mb-2 border p-2 rounded' placeholder='Product name' {...register("name", { required: true })} />
+                <input className='mb-2 border p-2 rounded' placeholder='Title' {...register("title", { required: true })} />
+                <input className='mb-2 border p-2 rounded' placeholder='Supplier name' {...register("supplier", { required: true })} />
+                <input className='mb-2 border p-2 rounded' placeholder='Price' type="number" {...register("price", { required: true })} />
+                <input className='mb-2 border p-2 rounded' placeholder='Quantity' type="number" {...register("quantity", { required: true })} />
+                <input className='mb-2 border p-2 rounded' placeholder='Description' {...register("description", { required: true })} />
+                <input className='mb-2 border p-2 rounded' placeholder='Photo URL' {...register("img", { required: true })} />
+                <input className='mb-2 border p-2 rounded' placeholder="Ratings out of 5" defaultValue='5' type="number" {...register("ratings", { required: true })} />
+               
 
-
-                <input className='py-3 btn shadow border border-3 border-dark btn-warning fs-5' type="submit" value="Add Inventory" />
+                <input className='py-3 btn shadow border border-3 border-dark btn-warning fs-5' type="submit" value="Add Inventory"/>
             </form>
         </div>
     );

@@ -29,6 +29,7 @@ const ProductDetails = () => {
             .then(res => res.json())
             .then(data => {
                 setProduct({ ...product, quantity: parseInt(product.quantity) + parseInt(value) })
+
             })
         toast.success("Successfully Restocked");
         setShow(false);

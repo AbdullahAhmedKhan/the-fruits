@@ -2,17 +2,22 @@ import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import './Inventory.css';
 
 const Inventory = () => {
     const navigate = useNavigate();
     const [inventories, setInventories] = useState([]);
 
+
     useEffect(() => {
         fetch('http://localhost:5000/inventory')
             .then(res => res.json())
-            .then(data => setInventories(data))
+            .then(data => {
+                setInventories(data);
+            })
     }, [])
+
     const handleUpdate = productId => {
         navigate(`/inventory/${productId}`);
     }
@@ -22,18 +27,19 @@ const Inventory = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure want to delete?')
         if (proceed) {
-            const url = `http://localhost:5000//inventory/${id}`;
+            const url = `http://localhost:5000/inventory/${id}`;
             fetch(url, {
-                method: 'DELETE',
+                method: 'DELETE'
             })
                 .then(res => res.json())
                 .then(data => {
                     if (data.deleteCount > 0) {
-                        const remaining = inventories.filter(fruit => fruit._id !== id)
-                        setInventories(remaining);
+                        const remaining = inventories.filter(fruit => fruit._id !== id);
+                        setInventories(remaining)
                     }
                 })
         }
+        toast("Successfully deleted");
     }
     return (
         <div className='container my-5'>

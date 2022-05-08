@@ -23,9 +23,12 @@ const Header = () => {
                             <Link to='/inventory'>Manage Inventory</Link>
                             
                                 
-                                <Link to='/myitem'>My Items</Link>
-                            
-                                <Link to='/myitem'>My Items</Link>
+                                {
+                                    user ? 
+                                    <Link to='/myitem'>My Items</Link>
+                                    :
+                                    ''
+                                }
                             <Link to='/blogs'>Blogs</Link>
                         </Nav>
                         <Nav>
